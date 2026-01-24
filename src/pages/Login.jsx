@@ -1,63 +1,87 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react"
+import { useNavigate, Link } from "react-router-dom"
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [role, setRole] = useState("user");
+  const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("role", role);
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
 
-    if (role === "admin") {
-      navigate("/admin/users");
-    } else {
-      navigate("/home");
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Login clicked") // 🔍 DEBUG
+
+    if (!email || !password) {
+      setError("All fields are required")
+      return
     }
-  };
+
+    // ✅ DUMMY AUTH
+    if (email === "user@gmail.com" && password === "Kaushal@123") {
+      localStorage.setItem("token", "user-token")
+      localStorage.setItem("role", "user")
+      navigate("/home")
+    } else if (email === "admin@gmail.com" && password === "Admin@2026#") {
+      localStorage.setItem("token", "admin-token")
+      localStorage.setItem("role", "admin")
+      navigate("/admin-dashboard")
+    } else {
+      setError("Invalid email or password")
+    }
+  }
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-900">
-      <form className="bg-white p-6 rounded shadow w-80" onSubmit={handleLogin}>
-        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="bg-white w-full max-w-md p-8 rounded shadow-lg">
 
-        <input
-          className="w-full p-2 mb-3 border rounded"
-          placeholder="Email"
-          required
-        />
-
-        <input
-          className="w-full p-2 mb-3 border rounded"
-          placeholder="Password"
-          type="password"
-          required
-        />
-
-        <select
-          className="w-full p-2 mb-4 border rounded"
-          onChange={(e) => setRole(e.target.value)}
-        >
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
-
-        <button className="w-full bg-orange-500 text-white py-2 rounded">
+        <h2 className="text-3xl font-bold text-center mb-6">
           Login
-        </button>
+        </h2>
 
-        {/* Register link */}
-        <p className="text-sm text-center mt-4">
-          Don't have an account?{" "}
-          <Link to="/register" className="text-orange-500 font-semibold">
-            Register
+        {error && (
+          <p className="text-red-500 text-center mb-4">
+            {error}
+          </p>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border rounded"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-4 py-2 border rounded"
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-orange-500 text-white py-2 rounded"
+          >
+            Login
+          </button>
+
+        </form>
+
+        <p className="text-center mt-4 text-sm">
+          New user?{" "}
+          <Link to="/register" className="text-orange-500">
+            Create an account
           </Link>
         </p>
-      </form>
-    </div>
-  );
-};
 
-export default Login;
+      </div>
+    </div>
+  )
+}
+
+export default Login
