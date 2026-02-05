@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserLayout from "./layouts/UserLayout";
@@ -23,7 +24,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* DEFAULT ROUTE */}
         <Route
           path="/"
@@ -54,6 +54,15 @@ const App = () => {
           }
         />
 
+        <Route
+          path="/contact"
+          element={
+            <ProtectedRoute>
+              <ContactUs />
+            </ProtectedRoute>
+          }
+        />
+
         {/* USER DASHBOARD */}
         <Route
           path="/dashboard"
@@ -75,7 +84,6 @@ const App = () => {
 
         {/* FALLBACK */}
         <Route path="*" element={<Navigate to="/" />} />
-
       </Routes>
     </BrowserRouter>
   );

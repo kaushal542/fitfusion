@@ -8,7 +8,8 @@ const Navbar = () => {
     "hover:text-orange-500 transition"
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-linear-to-b from-black/80 to-transparent">
+    /* Changed 'fixed' to 'absolute' so it scrolls with the page */
+    <nav className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/80 to-transparent">
       <div className="max-w-7xl mx-auto px-8 py-6 flex items-center">
 
         {/* LOGO */}
@@ -17,7 +18,7 @@ const Navbar = () => {
         </div>
 
         {/* CENTER LINKS */}
-        <ul className="w-1/2 flex justify-center gap-10 font-oswald uppercase text-sm tracking-wider text-white">
+        <ul className="w-1/2 flex justify-center gap-10 font-oswald font-bold uppercase text-sm tracking-wider text-white">
           <li>
             <NavLink
               to="/"
