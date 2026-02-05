@@ -164,7 +164,7 @@ const ContactUs = () => {
             Find Us On Map
           </h2>
 
-          <div className="w-full h-[450px] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <div className="w-full h-112.5 rounded-lg overflow-hidden border border-gray-800 shadow-lg">
             <iframe
               title="MB Fitness Gym Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.614150808248!2d79.02153873490721!3d21.11948565740298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c00050610c3d%3A0x571a2f4f696976d!2sMB%20Fitness%20GYM!5e0!3m2!1sen!2sin!4v1770317087406!5m2!1sen!2sin"
