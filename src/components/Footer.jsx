@@ -44,8 +44,8 @@ const Footer = () => {
           {/* LOGO + ABOUT */}
           <div>
             <h2 className="text-4xl font-extrabold text-white mb-4">
-              <span className="text-white">GY</span>
-              <span className="text-orange-500">M</span>
+              <span className="text-white">FIT</span>
+              <span className="text-orange-500">FUSION</span>
             </h2>
 
             <p className="text-gray-400 mb-6">
