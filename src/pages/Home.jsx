@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 //Trainers data
 import trainers from "../data/trainers";
 
-
 // Service Images
 import service1 from "../assets/images/service-1.jpg";
 import service2 from "../assets/images/service-2.jpg";
@@ -14,14 +13,6 @@ import service3 from "../assets/images/service-3.jpg";
 import service4 from "../assets/images/service-4.jpg";
 import service5 from "../assets/images/service-5.jpg";
 import service6 from "../assets/images/service-6.jpg";
-
-// Trainer Images
-import trainer1 from "../assets/images/trainer-1.jpg";
-import trainer2 from "../assets/images/trainer-2.jpg";
-import trainer3 from "../assets/images/trainer-3.jpg";
-import trainer4 from "../assets/images/trainer-4.jpg";
-import trainer5 from "../assets/images/trainer-5.jpg";
-import trainer6 from "../assets/images/trainer-6.jpg";
 
 const Home = () => {
   // --- CAROUSEL STATE ---
@@ -160,8 +151,7 @@ const Home = () => {
             </div>
             <h5 className="font-semibold mb-2">Modern equipment</h5>
             <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore facilisis.
+             Train with latest international machines including strength, cardio, and functional training equipment designed for safe and effective workouts.
             </p>
           </div>
 
@@ -171,8 +161,7 @@ const Home = () => {
             </div>
             <h5 className="font-semibold mb-2">Healthy nutrition plan</h5>
             <p className="text-gray-400 text-sm">
-              Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-              maecenas accumsan lacus vel facilisis.
+             Get customized diet guidance from our trainers to support fat loss, muscle gain, and overall health based on your body type and goals.
             </p>
           </div>
 
@@ -182,8 +171,7 @@ const Home = () => {
             </div>
             <h5 className="font-semibold mb-2">Professional training plan</h5>
             <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore facilisis.
+             Our certified trainers create structured workout programs that help you progress faster while avoiding injuries and plateaus.
             </p>
           </div>
 
@@ -193,8 +181,7 @@ const Home = () => {
             </div>
             <h5 className="font-semibold mb-2">Unique to your needs</h5>
             <p className="text-gray-400 text-sm">
-              Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-              maecenas accumsan lacus vel facilisis.
+             Every member is different — we design personalized fitness routines according to your body condition, lifestyle, and fitness level.
             </p>
           </div>
         </div>

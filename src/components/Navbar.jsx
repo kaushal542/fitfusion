@@ -9,12 +9,12 @@ const Navbar = () => {
 
   return (
     /* Changed 'fixed' to 'absolute' so it scrolls with the page */
-    <nav className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/80 to-transparent">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-linear-to-b from-black/80 to-transparent">
       <div className="max-w-7xl mx-auto px-8 py-6 flex items-center">
 
         {/* LOGO */}
         <div className="w-1/4 text-2xl font-oswald font-bold tracking-widest text-white">
-          <span className="text-orange-500">GYM</span>LIFE
+          <span className="text-orange-500">FIT</span>FUSION
         </div>
 
         {/* CENTER LINKS */}

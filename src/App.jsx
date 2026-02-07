@@ -16,7 +16,7 @@ import HomeWorkout from "./pages/user/HomeWorkout";
 import VegDiet from "./pages/user/VegDiet";
 import NonVegDiet from "./pages/user/NonVegDiet";
 import Supplement from "./pages/user/Supplement";
-import Contact from "./pages/user/Contact";
+import SmartPlan from "./pages/user/SmartPlan";
 
 const App = () => {
   const isLoggedIn = localStorage.getItem("token");
@@ -79,7 +79,7 @@ const App = () => {
           <Route path="diet/veg" element={<VegDiet />} />
           <Route path="diet/nonveg" element={<NonVegDiet />} />
           <Route path="supplement" element={<Supplement />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="smart-plan" element={<SmartPlan />} />
         </Route>
 
         {/* FALLBACK */}
